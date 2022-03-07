@@ -33,7 +33,7 @@ class RazaController extends Controller
         return redirect()->route('admin.razas.edit', $raza);
     }
 
-    public function cargar(Request $request)
+    public function show(Request $request)
     {
 
     }
