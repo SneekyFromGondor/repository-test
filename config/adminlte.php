@@ -251,11 +251,6 @@ return [
             'route'  => 'admin.razas.index',
             'icon' => 'fas fa-fw fa-paw',
         ],
-        [
-            'text' => 'Añadir variante',
-            'route'  => 'admin.variantes.create',
-            'icon' => 'fas fa-fw fa-plus',
-        ],
         ['header' => 'VIAJES CANINOS'],
         [
             'text'       => 'Lista de viajes',

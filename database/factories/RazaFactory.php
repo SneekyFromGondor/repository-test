@@ -17,7 +17,7 @@ class RazaFactory extends Factory
             'nombre' => $nombre,
             'slug' => Str::slug($nombre),
             'variando' => array(
-                    'variante' => $var,
+                    'var_nombre' => $var,
                     'tamaño' => $this->faker->randomDigit(),
                     'color' => $this->faker->word(8)
             )

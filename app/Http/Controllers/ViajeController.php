@@ -9,6 +9,12 @@ use App\Models\Variante;
 
 class ViajeController extends Controller
 {
+    public function inicio()
+    {
+        return view('inicio');
+        //PAGINA DE INICIO INDEX
+    }
+
     public function index()
     {
         $viajes = Viaje::where('status', 2)->latest('id')->paginate(8);
@@ -41,9 +47,7 @@ class ViajeController extends Controller
     public function cachorrxs()
     {
         $cachorrxs = Raza::get();
-        $vars = Variante::get();
 
-        return view('viajes.cachorrxs', compact('cachorrxs', 'vars'));
-
+        return view('viajes.cachorrxs', compact('cachorrxs'));
     }
 }

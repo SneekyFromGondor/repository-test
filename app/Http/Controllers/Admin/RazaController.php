@@ -28,9 +28,18 @@ class RazaController extends Controller
             'slug' => 'required|unique:razas',
         ]);
 
-        $raza = Raza::create($request->all());
+        $raza = Raza::create([
+            'nombre' => $request->nombre,
+            'slug' => $request->slug,
+            'variando' => array(
+                'var_nombre' => $request->var_name,
+                'tamaño' => $request->var_tam,
+                'color' => $request->var_color
+            )
+        ]);
 
         return redirect()->route('admin.razas.edit', $raza);
+
     }
 
     public function show(Request $request)

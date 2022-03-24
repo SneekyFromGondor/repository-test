@@ -8,7 +8,6 @@
 					<div>
 						<small class="inline-block px-3 h-6 bg-blue-600 rounded-full">{{$v->descripcion}}</small>
 					</div>
-
 					<h1 class="text-4xl text-black leading-8 font-bold">
 						<a href="{{route('viajes.show', $v)}}">{{$v->destino}}</a>
 					</h1>

@@ -46,5 +46,5 @@
         </div>
 
     </div>
-        <a class="btn btn-success btn-lg float-left" href="{{route('admin.variantes.create')}}">Añadir variante</a>
+
 @stop

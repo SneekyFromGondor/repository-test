@@ -32,20 +32,20 @@
                 <div class="form-group">
                     <p class="font-weight-bold">Tiene variantes?</p>
                     <label>
-                        {!! Form::radio('vari_ante', 1) !!}
+                        {!! Form::radio('var_stat', 1) !!}
                         No
                     </label>
                     <label>
-                        {!! Form::radio('vari_ante', 2, true) !!}
+                        {!! Form::radio('var_stat', 2, true) !!}
                         Si
                     </label>
 
-                    @error('vari_ante')
+                    @error('var_stat')
                         <br>
                         <span class="text-danger">{{$message}}</span>
                     @enderror
 
-                    <input type="button" class="ml-3" id="btnAddMore" value="New variant">
+                    <input type="button" class="btn btn-sm btn-success ml-3 mb-1" id="btnAddMore" value="Añadir variante">
                 </div>
 
                 <div id="contenedor"></div><!---where my variant_form is displayed-->
@@ -85,18 +85,17 @@
     });
 
     $(document).ready(function() {
-      var plantilla = "<form action='create.blade.php'>" +//here it might be the route
-        "  Variant name:<br>" +
-        "  <input type='text' name='var_name'>" +
+      var tr = 0;
+      var plantilla =
+        "  Nombre de la variante:   <br> " +
+        "  <input class='form-control' type='text' name='var_name[]'>" +
         "  <br>" +
-        "  Length:<br>" +
-        "  <input type='text' name='var_length' >" +
+        "  Tamaño:<br>" +
+        "  <input class='form-control' type='number' name='var_tam[]' >" +
         "  <br>" +
         "  Color:<br>" +
-        "  <input type='text' name='var_color' >" +
-        "  <input type='submit' value='Add variant' class='ml-3'>" +
-        "  <br>" +
-        "</form>";
+        "  <input class='form-control' type='text' name='var_color[]' >" +
+        "  <small>---------------</small><br>";
 
       var contenedor = $("#contenedor");
 
